@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <script src="../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../style/dangnhap.css">
+  <script src="../js/dangnhap.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container-fluid header1">
+      <a class="navbar-brand" href="../index.html"><img src="../image/logo xwatch.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <h3>Một Chữ Tín - Vạn Niềm Tin</h3>
+
+        <div id="signupin" class="navbar-nav me-auto mb-2 mb-lg-0">
+          <span class="map"><i class="bi bi-geo-alt"></i></span><a href="#">Hệ thống cửa hàng</a>
+          <span class="phone"><i class="bi bi-telephone"></i></span><a href="#">Hotline: 0975.771.793</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Phần điều hướng-->
+  <nav class="navbar navbar-expand-lg navbar-light nav">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="../index.html"><i class="bi bi-house-heart"></i></a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Về Xwatch
+            </a>
+            <ul class="dropdown-menu bg-secondary hover" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Câu Chuyện Thương Hiệu</a></li>
+              <li><a class="dropdown-item" href="#">Giới Thiệu Đồng Hồ Xwatch</a></li>
+              <li><a class="dropdown-item" href="#">Triết Lý Kinh Doanh</a></li>
+              <li><a class="dropdown-item" href="#">Chế Độ Bảo Hành</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Thương Hiệu
+            </a>
+            <ul class="dropdown-menu bg-secondary hover" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Đồng hồ Orient</a></li>
+              <li><a class="dropdown-item" href="#">Đồng hồ Casio</a></li>
+              <li><a class="dropdown-item" href="#">Đồng hồ Rolex</a></li>
+              <li><a class="dropdown-item" href="#">Đồng hồ Atlantic</a></li>
+              <li><a class="dropdown-item" href="#">Đồng hồ Citizen</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Đồng Hồ Nam
+            </a>
+            <ul class="dropdown-menu bg-secondary hover" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Thương Hiệu</a></li>
+              <li><a class="dropdown-item" href="#">Mức Giá</a></li>
+              <li><a class="dropdown-item" href="#">Loại Dây</a></li>
+              <li><a class="dropdown-item" href="#">Bộ Máy</a></li>
+              <li><a class="dropdown-item" href="#">Size Mặt</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Đồng Hồ Nữ
+            </a>
+            <ul class="dropdown-menu bg-secondary hover" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Thương Hiệu</a></li>
+              <li><a class="dropdown-item" href="#">Mức Giá</a></li>
+              <li><a class="dropdown-item" href="#">Loại Dây</a></li>
+              <li><a class="dropdown-item" href="#">Bộ Máy</a></li>
+              <li><a class="dropdown-item" href="#">Size Mặt</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#">Phụ Kiện</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Sửa Chữa</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- register -->
+  <form class="form" action="" onsubmit="saveLogin(event)">
+    <div class="container">
+      <h1>Đăng Nhập Tài Khoản</h1>
+      <hr>
+
+      <label for="number"><b>Số Điện Thoại</b></label> <br>
+      <input id="phone" type="number" placeholder="Nhập Số Điện Thoại" name="number" > <br>
+
+      <label for="psw" class="pass"><b>Mật Khẩu</b></label> <br>
+      <input id="passwordInput" type="password" placeholder="Nhập Mật Khẩu" name="psw" >
+      <i class="bi bi-eye-slash" onclick = "togglePassword()" id="togglePassword1"></i>
+
+      <div id="result" style="color: red"></div>
+
+      <label class="checkbox">
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ Đăng Nhập
+      </label> <br>
+
+      <div class="clearfix">
+        <button type="submit" class="signinbtn">Đăng Nhập</button>
+      </div>
+
+      <p style="color: rgb(206, 251, 242)">Bạn chưa có tài khoản? <a href="./dangky.html"
+          style="text-decoration: none;">Tạo tài khoản!</a></p>
+      <div id="snackbar" style="color: rgb(206, 251, 242);">Đăng nhập thành công</div>
+    </div>
+  </form>
+
+  <script src="../js/dangnhap.js"></script>
+</body>
+
+</html>

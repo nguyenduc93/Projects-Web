@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đồng hồ Xwatch</title>
+  <link rel="stylesheet" href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <script src="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./style/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container-fluid header1">
+      <a class="navbar-brand" href="./index.html"><img src="./image/logo xwatch.png" alt="logo"></a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <!-- <div class="collapse navbar-collapse " id="navbarSupportedContent"> -->
+        <!-- Tìm kiếm -->
+        <div class="col-md-5 mx-auto">
+          <div class="input-group">
+              <input class="form-control border-end-0 border rounded-pill" type="search" value="search" id="example-search-input">
+              <span class="input-group-append">
+                  <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5 search" type="button">
+                      <i class="bi bi-search"></i>
+                  </button>
+              </span>
+          </div>
+      </div>
+      <div id="signupin" class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class = "login1"><a id="logIn" href="./html/dangnhap.html"><button type="button" class="btn btn-outline-primary btn2">Đăng Nhập</button></a></div>
+        <div id="register"><a href="./html/dangky.html"><button type="button" class="btn btn-outline-primary btn1">Đăng Ký</button></a></div>
+      </div>
+  </div>
+  </header>
+
+  <!-- Phần điều hướng-->
+  <nav class="navbar navbar-expand-lg navbar-light nav">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#"><i class="bi bi-house-heart"></i></a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="./index.html" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Về Xwatch
+            </a>
+            <ul class="dropdown-menu bg-secondary hover" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Câu Chuyện Thương Hiệu</a></li>
+              <li><a class="dropdown-item" href="#">Giới Thiệu Đồng Hồ Xwatch</a></li>
+              <li><a class="dropdown-item" href="#">Triết Lý Kinh Doanh</a></li>
+              <li><a class="dropdown-item" href="#">Chế Độ Bảo Hành</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Thương Hiệu
+            </a>
+            <ul class="dropdown-menu bg-secondary hover" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Đồng hồ Orient</a></li>
+              <li><a class="dropdown-item" href="#">Đồng hồ Casio</a></li>
+              <li><a class="dropdown-item" href="#">Đồng hồ Rolex</a></li>
+              <li><a class="dropdown-item" href="#">Đồng hồ Atlantic</a></li>
+              <li><a class="dropdown-item" href="#">Đồng hồ Citizen</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Đồng Hồ Nam
+            </a>
+            <ul class="dropdown-menu bg-secondary hover" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Thương Hiệu</a></li>
+              <li><a class="dropdown-item" href="#">Mức Giá</a></li>
+              <li><a class="dropdown-item" href="#">Loại Dây</a></li>
+              <li><a class="dropdown-item" href="#">Bộ Máy</a></li>
+              <li><a class="dropdown-item" href="#">Size Mặt</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Đồng Hồ Nữ
+            </a>
+            <ul class="dropdown-menu bg-secondary hover" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Thương Hiệu</a></li>
+              <li><a class="dropdown-item" href="#">Mức Giá</a></li>
+              <li><a class="dropdown-item" href="#">Loại Dây</a></li>
+              <li><a class="dropdown-item" href="#">Bộ Máy</a></li>
+              <li><a class="dropdown-item" href="#">Size Mặt</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#">Phụ Kiện</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Sửa Chữa</a>
+          </li>
+          <li class="nav-item cart1" id ="cart">
+            <a href="./html/cart.html"><i class="bi bi-cart3"></i>
+                 </a>
+            <span class="countCart" id="countCart" style="color: antiquewhite;">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Slide -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./image/slide1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./image/slide2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./image/slide3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- sản phẩm -->
+  <div class="text-divider">
+    <h2>Sản Phẩm Nổi Bật</h2>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4 product" id="product1">
+    <!-- <div class="col">
+      <div class="card h-100">
+        <img src="./image/img1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Đồng hồ Orient RA-AS0009S10B</h5>
+          <p class="card-text">
+           <p> Giá: 15200000</p>
+           <p>Thương Hiệu: Nhật Bản </p>
+            </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><button>Thêm vào giỏ hàng</button></small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><a href=""><button>Thêm Vào Giỏ
+                Hàng</button></a></small>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4 product" id="product1">
+    <!-- <div class="col">
+      <div class="card h-100">
+        <img src="./image/img1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Đồng hồ Orient RA-AS0009S10B</h5>
+          <p class="card-text">
+           <p> Giá: 15200000</p>
+           <p>Thương Hiệu: Nhật Bản </p>
+            </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><button>Thêm vào giỏ hàng</button></small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><a href=""><button>Thêm Vào Giỏ
+                Hàng</button></a></small>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4 product" id="product1">
+    <!-- <div class="col">
+      <div class="card h-100">
+        <img src="./image/img1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Đồng hồ Orient RA-AS0009S10B</h5>
+          <p class="card-text">
+           <p> Giá: 15200000</p>
+           <p>Thương Hiệu: Nhật Bản </p>
+            </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><button>Thêm vào giỏ hàng</button></small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"><a href=""><button>Thêm Vào Giỏ
+                Hàng</button></a></small>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+  <!-- Nackbar -->
+  <div id="snackbar" style="color: rgb(206, 251, 242);">Đăng Nhập Để Mua Sắm Thôi!</div>
+  <div id="snackbar1" style="color: rgb(206, 251, 242);">Sản Phẩm Đã Có Trong Giỏ Hàng Rồi Thượng Đế Ạ!</div>
+
+    <!-- Đánh giá của khách hàng -->
+    <div class="text-divider review">
+      <h2>Hãy Là Người Dùng Thông Minh</h2>
+    </div>
+    <div class="card bg-dark text-white">
+      <img src="./image/bg2.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Chào mừng bạn đã đến với Xwatch!</h5>
+        <p class="card-text">♦ Xwatch là một hệ thống cửa hàng đồng hồ chính hãng tại Việt Nam, <br>chuyên phân phối các thương hiệu đồng hồ Thụy Sĩ, Nhật Bản, Mỹ,<br> Pháp, Đức như: OP, Ogival, Seiko, Citizen, Orient, Bentley, Srwatch,<br> Festina, Freelook, Elixa và Bulova..</p>
+        <p class="card-text">♦ Xwatch là Hệ thống phân phối đồng hồ chính hãng UY TÍN,<br> thuộc TOP 3 thương hiệu đồng hồ lớn nhất tại Việt Nam..</p>
+      </div>
+    </div>
+<!-- Chế độ bảo hành-->
+  <div class="extention-service">
+      <div class="grid">
+          <div class="grid__row">
+              <div class="grid__column-12-4">
+                  <div class="extention-service-wrap">
+                      <img
+                          class="extention-service-icon"
+                          src="https://theme.hstatic.net/200000388065/1000766714/14/vice_item_1.png?v=111"
+                          alt="" />
+                      <h3 class="extention-content">
+                          Giao hàng miễn phí
+                      </h3>
+                      <p>với đơn hàng từ 20tr trở lên</p>
+                  </div>
+              </div>
+              <div class="grid__column-12-4">
+                  <div class="extention-service-wrap">
+                      <img
+                          class="extention-service-icon"
+                          src="https://theme.hstatic.net/200000388065/1000766714/14/vice_item_2.png?v=111"
+                          alt="" />
+                      <h3 class="extention-content">
+                          Hỗ trợ online 24/7
+                      </h3>
+                      <p>Hỗ trợ online/offline 24/7</p>
+                  </div>
+              </div>
+              <div class="grid__column-12-4">
+                  <div class="extention-service-wrap">
+                      <img
+                          class="extention-service-icon"
+                          src="https://theme.hstatic.net/200000388065/1000766714/14/vice_item_3.png?v=111"
+                          alt="" />
+                      <h3 class="extention-content">
+                          Đặt hàng trực tuyến
+                      </h3>
+                      <p>Hotline : 0975.771.793</p>
+                  </div>
+              </div>
+              <div class="grid__column-12-4">
+                  <div class="extention-service-wrap">
+                      <img
+                          class="extention-service-icon"
+                          src="https://theme.hstatic.net/200000388065/1000766714/14/vice_item_4.png?v=111"
+                          alt="" />
+                      <h3 class="extention-content">
+                          Miễn phí đổi trả
+                      </h3>
+                      <p>Trong vòng 7 ngày</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="grid">
+      <div class="footer-container">
+          <div class="footer-logo">
+              <img
+                  src="./image/logo xwatch.png"
+                  alt="" />
+          </div>
+          <ul class="footer-social">
+              <li>
+                  <a href=""><i class="bi bi-youtube"></i></a>
+              </li>
+              <li>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+              </li>
+              <li>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+              </li>
+              <li>
+                  <a href=""><i class="bi bi-twitter"></i></a>
+              </li>
+          </ul>
+          <div class="footer-copyright">
+              <h3 >Một Chữ Tín • Vạn Niền Tin</h3>
+          </div>
+          <ul class="footer-link">
+              <li><a href="">Trang chủ</a></li>|
+              <li><a href="">Sản phẩm</a></li>|
+              <li><a href="">Thương hiệu</a></li>|
+              <li><a href="">Blog</a></li>|
+              <li><a href="">Giới thiệu</a></li>|
+              <li><a href="">Liên hệ</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+</div>
+
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

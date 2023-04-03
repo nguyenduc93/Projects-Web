@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../style/admin.css">
+    <!-- <link rel="stylesheet" href="../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.0.2-dist/./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+</head>
+
+<body class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-secondary ">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link align-middle px-0">
+                            <img src="../image/logo xwatch.png" alt="" style="background-color: rgb(52, 49, 49); width: 150px;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./admin.html" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house" style="color: rgb(41, 36, 36);"></i> <span class="ms-1 d-none d-sm-inline text-info">Home</span>
+                        </a>
+                    </li>
+                        <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                            <li class="w-100">
+                                <a href="#" onclick="showList()" class="nav-link px-0">
+                                    <i class="bi bi-shop" style="color: rgb(41, 36, 36);"></i> <span
+                                        class="d-none d-sm-inline text-info">Quản Lý Cửa Hàng</span>
+                                </a>
+                            </li>
+                         </ul>
+                    <li>
+                        <a onclick="showUser()" href="#" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-people" style="color: rgb(41, 36, 36);"></i> <span class="ms-1 d-none d-sm-inline text-info">Quản Lí Người
+                                Dùng</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col py-3">
+            <div class="container ">
+
+                <!-- Phần xử lý người dùng -->
+                <div class="row showList">
+                    <div id="listProduct" class="rounded col-12">
+                        <h3 style="color: #936cec">Thêm Sản Phẩm Vào Cửa Hàng</h3> <br>
+
+                        <!--Thêm ảnh-->
+                        <input type="file" value="upload" accept=".jpg" id="imgProduct" style="outline: none">
+                        <img id="image" src="" alt="" width="100px" height="100px" />
+
+                        <!-- Thêm thông tin sản phẩm -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Tên Sản Phẩm</span>
+                            <input type="text" class="form-control" id="name" placeholder="Tên sản phẩm"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Giá Sản Phẩm</span>
+                            <input type="number" class="form-control" id="price" placeholder="Giá sản phẩm"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Thương Hiệu</span>
+                            <input type="text" class="form-control" id="trademark" placeholder="Thương hiệu"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <button style="margin-bottom: 12px" type="button" onclick="creatProduct()"
+                            class="btn btn-primary menu_product-btn">Thêm</button>
+
+                        <!-- Xử lý sản phẩm -->
+                        <table class="table table-product">
+                            <thead>
+                                <tr class="table-primary">
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Ảnh</th>
+                                    <th scope="col">Tên Sản Phẩm</th>
+                                    <th scope="col">Thương Hiệu</th>
+                                    <th scope="col">Giá</th>
+                                    <th scope="col">Edit</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="draw-table">
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                <!-- Xử lý người dùng -->
+                <div id="renderListUser">
+                    <table class="table table-product">
+                        <tr class="table-primary">
+                            <th scope="col">STT</th>
+                            <th scope="col">Số Điện Thoại</th>
+                            <th scope="col">Địa chỉ email</th>
+                            <th scope="col">Mật Khẩu</th>
+                            <th scope="col">Xóa</th>
+                            <th scope="col">Khóa TK</th>
+                            <th scope="col">Trạng Thái</th>
+                        </tr>
+                        <tbody id="listUser" style="background-color: white">
+                            <tr>
+                                <!-- <td scope="row">stt</td>
+                                <td>Số Điện Thoại</td>
+                                <td>Email</td>
+                                <td>Password</td>
+                                 <td><button style="border-radius: 2px;border: 1px solid #f3e8e8" onclick="deleteUser(${i})"><i class="bi bi-trash3-fill"></i></button></td>
+                                 <td><button onclick="banUser(${i})">Ban</button></td>
+                                 <td>Trạng Thái</td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+                <script src="../js/admin.js"></script>
+</body>
+
+</html>
